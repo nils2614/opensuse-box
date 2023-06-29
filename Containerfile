@@ -5,6 +5,7 @@ LABEL com.github.containers.toolbox="true"
 RUN echo -e '[main]\nsolver.onlyRequires = true\nsolver.dupAllowVendorChange = false\nrpm.install.excludedocs = yes' > /etc/zypp/zypp.conf
 
 RUN zypper modifyrepo --disable repo-non-oss
+RUN zypper modifyrepo --disable repo-openh264
 RUN zypper -n dist-upgrade
 RUN zypper -n install -f bash command-not-found container-support-utils coreutils dash dash-sh glibc-locale htop libcap-progs nano rpm sudo system-group-wheel util-linux wget zsh zypper -bash-sh
 
