@@ -11,5 +11,6 @@ RUN zypper -n install -f bash bc command-not-found container-support-utils coreu
 
 RUN sed -i 's/^# %wheel ALL=(ALL:ALL) NOPASSWD: ALL$/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/' /etc/sudoers
 RUN sed -i '/Defaults targetpw/d' /etc/sudoers
+RUN touch /run/.containersetupdone
 
 CMD /bin/sh
