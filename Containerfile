@@ -12,4 +12,11 @@ RUN zypper -n install -f bash container-support-utils dash dash-sh flatpak-spawn
 RUN sed -i 's/^# %wheel ALL=(ALL:ALL) NOPASSWD: ALL$/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/' /etc/sudoers
 RUN sed -i '/Defaults targetpw/d' /etc/sudoers
 
+COPY host-runner.sh /usr/local/bin/host-runner.sh
+RUN ln -sf /usr/local/bin/host-runner.sh /usr/local/bin/flatpak
+RUN ln -sf /usr/local/bin/host-runner.sh /usr/local/bin/podman
+RUN ln -sf /usr/local/bin/host-runner.sh /usr/local/bin/rpm-ostree
+RUN ln -sf /usr/local/bin/host-runner.sh /usr/local/bin/systemctl
+RUN ln -sf /usr/local/bin/host-runner.sh /usr/local/bin/toolbx
+
 CMD /bin/sh
