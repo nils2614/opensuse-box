@@ -13,7 +13,7 @@ RUN zypper -n install -f container-support-utils dash dash-sh glibc-locale htop 
 RUN sed -i 's/^# %wheel ALL=(ALL:ALL) NOPASSWD: ALL$/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/' /etc/sudoers
 RUN sed -i '/Defaults targetpw/d' /etc/sudoers
 
-RUN wget https://github.com/1player/host-spawn/releases/download/1.4.2/host-spawn-$(uname -m) -o /usr/bin/host-spawn
+RUN wget https://github.com/1player/host-spawn/releases/download/1.4.2/host-spawn-$(uname -m) -qO /usr/bin/host-spawn
 RUN chmod +x /usr/bin/host-spawn
 COPY host-runner.sh /usr/local/bin/host-runner.sh
 RUN chmod +x /usr/local/bin/host-runner.sh
