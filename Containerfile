@@ -2,7 +2,7 @@ FROM registry.opensuse.org/opensuse/tumbleweed:latest
 
 LABEL com.github.containers.toolbox="true"
 
-RUN echo -e '[main]\nsolver.onlyRequires = true\nsolver.dupAllowVendorChange = false\nrpm.install.excludedocs = yes' > /etc/zypp/zypp.conf
+RUN echo -e '[main]\nsolver.onlyRequires = true\nsolver.dupAllowVendorChange = false\nrpm.install.excludedocs = no' > /etc/zypp/zypp.conf
 
 RUN zypper modifyrepo --disable repo-non-oss
 RUN zypper modifyrepo --disable repo-openh264
