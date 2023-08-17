@@ -1,12 +1,12 @@
 # Toolbox Image: opensuse-box
-A custom openSUSE Tumbleweed Toolbox image, mainly designed for my personal use case. \
+A custom openSUSE Tumbleweed Toolbx image, mainly designed for my personal use case. \
 Feel free to give it a try though. :)
  
 To pull this image use:
  
 `podman pull ghcr.io/nils2614/opensuse-box:latest`
 
-To create a Toolbox container from this image:
+To create a Toolbx container from this image:
 
 `toolbox create --image ghcr.io/nils2614/opensuse-box:latest openSUSE-Box`
 
