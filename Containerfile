@@ -19,6 +19,7 @@ RUN ln -sf /usr/local/bin/host-runner.sh /usr/local/bin/nautilus
 RUN ln -sf /usr/local/bin/host-runner.sh /usr/local/bin/podman
 RUN ln -sf /usr/local/bin/host-runner.sh /usr/local/bin/rpm-ostree
 RUN ln -sf /usr/local/bin/host-runner.sh /usr/local/bin/systemctl
+RUN ln -sf /usr/local/bin/host-runner.sh /usr/local/bin/uname-host
 RUN ln -sf /usr/local/bin/host-runner.sh /usr/local/bin/xdg-open
 
 CMD /bin/sh
