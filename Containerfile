@@ -25,5 +25,6 @@ RUN ln -sf /usr/local/bin/host-runner.sh /usr/local/bin/rpm-ostree
 RUN ln -sf /usr/local/bin/host-runner.sh /usr/local/bin/systemctl
 RUN ln -sf /usr/local/bin/host-runner.sh /usr/local/bin/uname-host
 RUN ln -sf /usr/local/bin/host-runner.sh /usr/local/bin/xdg-open
+RUN ln -sf /usr/local/bin/host-runner.sh /usr/local/bin/zsh-host
 
 CMD /bin/sh
