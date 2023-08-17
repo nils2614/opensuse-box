@@ -2,8 +2,8 @@
 set -o errexit
 set -o nounset
 
-parameters="${@}"
-myname="$(basename "$0")"
-executable="${myname%-host}" # Ignore -host suffix in application names
+parameters="${@}" # Get parameters the script is called with
+myname="$(basename "$0")" # Get name the script is called by
+executable="${myname%-host}" # Ignore -host suffix in basename
 
-exec flatpak-spawn --host --watch-bus --env=TERM=xterm-256color $executable $parameters
+exec /usr/bin/host-spawn $executable $parameters
