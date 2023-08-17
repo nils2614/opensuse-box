@@ -4,6 +4,7 @@ LABEL com.github.containers.toolbox="true"
 
 RUN echo -e '[main]\nsolver.onlyRequires = true\nsolver.dupAllowVendorChange = false\nrpm.install.excludedocs = no' > /etc/zypp/zypp.conf
 
+RUN zypper addlock flatpak plymouth podman systemd
 RUN zypper modifyrepo --disable repo-non-oss
 RUN zypper modifyrepo --disable repo-openh264
 RUN zypper -n dist-upgrade
