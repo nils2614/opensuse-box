@@ -8,7 +8,7 @@ RUN zypper addlock flatpak plymouth podman systemd
 RUN zypper modifyrepo --disable repo-non-oss
 RUN zypper modifyrepo --disable repo-openh264
 RUN zypper -n dist-upgrade
-RUN zypper -n install -f container-support-utils dash dash-sh glibc-locale htop iproute2 iputils libcap-progs macchina nano openssh-clients shadow sudo system-group-wheel util-linux wget zsh -bash-sh
+RUN zypper -n install -f container-support-utils curl dash dash-sh glibc-locale htop iproute2 iputils libcap-progs macchina nano openssh-clients shadow sudo system-group-wheel util-linux zsh -bash-sh
 
 RUN sed -i 's/^# %wheel ALL=(ALL:ALL) NOPASSWD: ALL$/%wheel ALL=(ALL:ALL) NOPASSWD: ALL/' /etc/sudoers
 RUN sed -i '/Defaults targetpw/d' /etc/sudoers
