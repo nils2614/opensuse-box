@@ -7,6 +7,7 @@ RUN echo -e '[main]\nsolver.onlyRequires = true\nsolver.dupAllowVendorChange = f
 RUN zypper addlock flatpak plymouth podman systemd
 RUN zypper modifyrepo --disable repo-non-oss
 RUN zypper modifyrepo --disable repo-openh264
+
 RUN zypper -n dist-upgrade
 RUN zypper -n install -f container-support-utils curl dash dash-sh glibc-locale htop iproute2 iputils libcap-progs macchina nano openssh-clients shadow sudo system-group-wheel util-linux zsh -bash-sh
 
